@@ -115,9 +115,36 @@ bool HelloWorld::init()
         // add the sprite as a child to this layer
         this->addChild(sprite, 0);
     }
+
+
+    // My code
+    button = new Button("CloseNormal.png", "CloseSelected.png");
+    button->initTouchListener();
+    button->setPosition(origin + cocos2d::Vec2(visibleSize.width * 0.2f, visibleSize.height * 0.5f));
+    buttonLongPressSupport = new ButtonLongPressSupport("CloseNormal.png", "CloseSelected.png");
+    buttonLongPressSupport->initTouchListener();
+    buttonLongPressSupport->setPosition(origin + cocos2d::Vec2(visibleSize.width * 0.8f, visibleSize.height * 0.5f));
+
+    auto buttonLabel = cocos2d::Label::createWithTTF("Button", "fonts/Marker Felt.ttf", 24);
+    buttonLabel->setPosition({button->getPositionX(), button->getPositionY() + 28});
+    auto buttonLongPressSupportLabel = cocos2d::Label::createWithTTF("ButtonLongPressSupport", "fonts/Marker Felt.ttf", 12);
+    buttonLongPressSupportLabel->setPosition({buttonLongPressSupport->getPositionX(), buttonLongPressSupport->getPositionY() + 22});
+
+    buttonStateLabel = cocos2d::Label::createWithTTF("", "fonts/Marker Felt.ttf", 24);
+    buttonStateLabel->setPosition({button->getPositionX(), button->getPositionY() - 28});
+    buttonLongPressSupportStateLabel = cocos2d::Label::createWithTTF("", "fonts/Marker Felt.ttf", 12);
+    buttonLongPressSupportStateLabel->setPosition({buttonLongPressSupport->getPositionX(), buttonLongPressSupport->getPositionY() - 22});
+
+    this->addChild(buttonLabel);
+    this->addChild(buttonStateLabel);
+    this->addChild(button);
+    this->addChild(buttonLongPressSupportLabel);
+    this->addChild(buttonLongPressSupportStateLabel);
+    this->addChild(buttonLongPressSupport);
+
+    schedule(CC_SCHEDULE_SELECTOR(HelloWorld::update), 1 / 60.0f);
     return true;
 }
-
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
@@ -128,6 +155,13 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 
     //EventCustom customEndEvent("game_scene_close_event");
     //_eventDispatcher->dispatchEvent(&customEndEvent);
+}
 
+void HelloWorld::update(float t) {
+    button->update(t);
+    buttonLongPressSupport->update(t);
 
+    // Show state
+    buttonStateLabel->setString(button->getCurrentStateAsString());
+    buttonLongPressSupportStateLabel->setString(buttonLongPressSupport->getCurrentStateAsString());
 }

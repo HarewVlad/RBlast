@@ -1,0 +1,25 @@
+Executable : E:\AndroidSDK\cmake\3.10.2.4988404\bin\cmake.exe
+arguments : 
+-HE:\Cocos2d-x\cocosProjects\RBlast\TestTaskRBlast
+-DCMAKE_CXX_FLAGS=-frtti -fexceptions -fsigned-char
+-DCMAKE_FIND_ROOT_PATH=E:\Cocos2d-x\cocosProjects\RBlast\TestTaskRBlast\proj.android\app\.cxx\cmake\release\prefab\armeabi-v7a\prefab
+-DCMAKE_BUILD_TYPE=Release
+-DCMAKE_TOOLCHAIN_FILE=E:\AndroidSDK\ndk\21.3.6528147\build\cmake\android.toolchain.cmake
+-DANDROID_ABI=armeabi-v7a
+-DANDROID_NDK=E:\AndroidSDK\ndk\21.3.6528147
+-DANDROID_PLATFORM=android-16
+-DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a
+-DCMAKE_ANDROID_NDK=E:\AndroidSDK\ndk\21.3.6528147
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=E:\Cocos2d-x\cocosProjects\RBlast\TestTaskRBlast\proj.android\app\build\intermediates\cmake\release\obj\armeabi-v7a
+-DCMAKE_MAKE_PROGRAM=E:\AndroidSDK\cmake\3.10.2.4988404\bin\ninja.exe
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_SYSTEM_VERSION=16
+-DANDROID_STL=c++_static
+-DANDROID_TOOLCHAIN=clang
+-DANDROID_ARM_NEON=TRUE
+-BE:\Cocos2d-x\cocosProjects\RBlast\TestTaskRBlast\proj.android\app\.cxx\cmake\release\armeabi-v7a
+-GNinja
+jvmArgs : 
+
+Build command args:
