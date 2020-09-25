@@ -31,3 +31,5 @@
 [EMail](mailto:kolosov@antsgames.com)  
 [Telegram](https://telegram.me/RottenKotten)  
 
+# Solution  
+![](demo.gif)
