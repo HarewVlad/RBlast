@@ -41,8 +41,8 @@ public:
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
-public:
-    void update(float t);
+private:
+    void update(float t) override;
 private:
     Button *button;
     cocos2d::Label *buttonStateLabel;

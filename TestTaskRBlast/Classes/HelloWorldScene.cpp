@@ -118,11 +118,13 @@ bool HelloWorld::init()
 
 
     // My code
-    button = new Button("CloseNormal.png", "CloseSelected.png");
-    button->initTouchListener();
+    button = new Button("CloseNormal.png", "CloseSelected.png", [this](cocos2d::Ref *sender) {
+        cocos2d::log("Button pressed!");
+    });
     button->setPosition(origin + cocos2d::Vec2(visibleSize.width * 0.2f, visibleSize.height * 0.5f));
-    buttonLongPressSupport = new ButtonLongPressSupport("CloseNormal.png", "CloseSelected.png");
-    buttonLongPressSupport->initTouchListener();
+    buttonLongPressSupport = new ButtonLongPressSupport("CloseNormal.png", "CloseSelected.png", [this](cocos2d::Ref *sender) {
+        cocos2d::log("ButtonLongPressSupport pressed!");
+    });
     buttonLongPressSupport->setPosition(origin + cocos2d::Vec2(visibleSize.width * 0.8f, visibleSize.height * 0.5f));
 
     auto buttonLabel = cocos2d::Label::createWithTTF("Button", "fonts/Marker Felt.ttf", 24);
@@ -142,7 +144,7 @@ bool HelloWorld::init()
     this->addChild(buttonLongPressSupportStateLabel);
     this->addChild(buttonLongPressSupport);
 
-    schedule(CC_SCHEDULE_SELECTOR(HelloWorld::update), 1 / 60.0f);
+    this->scheduleUpdate();
     return true;
 }
 
@@ -158,10 +160,6 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 }
 
 void HelloWorld::update(float t) {
-    button->update(t);
-    buttonLongPressSupport->update(t);
-
-    // Show state
     buttonStateLabel->setString(button->getCurrentStateAsString());
     buttonLongPressSupportStateLabel->setString(buttonLongPressSupport->getCurrentStateAsString());
 }

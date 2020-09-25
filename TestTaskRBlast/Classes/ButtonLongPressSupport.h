@@ -7,8 +7,6 @@
 
 #include "Button.h"
 
-static const float LONG_PUSH_THRESHOLD = 2.0f;
-
 class ButtonLongPressSupportState : public ButtonState {
 public:
     static const int LONG_PUSH = 4;
@@ -16,15 +14,16 @@ public:
 
 class ButtonLongPressSupport : public Button {
 public:
-    ButtonLongPressSupport(const std::string &idleBackground, const std::string &pushedBackground);
-    void update(float t) override;
+    ButtonLongPressSupport(const std::string &idleBackground, const std::string &pushedBackground, const std::function<void (Ref *)> &func);
     std::string getCurrentStateAsString() const override;
 private:
     void setIdleState() override;
     void setDragoutState() override;
     void setLongPushState();
+    void update(float t) override;
 private:
     float timePushed;
+    float longPushThreshold;
 };
 
 

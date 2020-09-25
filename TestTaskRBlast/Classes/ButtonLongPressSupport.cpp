@@ -4,13 +4,14 @@
 
 #include "ButtonLongPressSupport.h"
 
-ButtonLongPressSupport::ButtonLongPressSupport(const std::string &idleBackground, const std::string &pushedBackground) : Button(idleBackground, pushedBackground) {
+ButtonLongPressSupport::ButtonLongPressSupport(const std::string &idleBackground, const std::string &pushedBackground, const std::function<void (Ref *)> &func) : Button(idleBackground, pushedBackground, func) {
     this->timePushed = 0.0f;
+    this->longPushThreshold = 2.0f;
 }
 
 void ButtonLongPressSupport::update(float t) {
     if (currentState == ButtonLongPressSupportState::PUSHED) {
-        if (timePushed >= LONG_PUSH_THRESHOLD) {
+        if (timePushed >= longPushThreshold) {
             setLongPushState();
 
             cocos2d::log("LONGPUSH");
