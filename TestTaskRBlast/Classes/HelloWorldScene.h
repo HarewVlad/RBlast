@@ -47,6 +47,4 @@ private:
     cocos2d::Label *buttonStateLabel;
     ButtonLongPressSupport *buttonLongPressSupport;
     cocos2d::Label *buttonLongPressSupportStateLabel;
-
-    cocos2d::Scene *testScenes;
 };
