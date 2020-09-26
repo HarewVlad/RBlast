@@ -17,6 +17,7 @@ public:
     ButtonLongPressSupport(const std::string &idleBackground, const std::string &pushedBackground, const std::function<void (Ref *)> &func);
     std::string getCurrentStateAsString() const override;
 private:
+    void setPushedState() override;
     void setIdleState() override;
     void setDragoutState() override;
     void setLongPushState();

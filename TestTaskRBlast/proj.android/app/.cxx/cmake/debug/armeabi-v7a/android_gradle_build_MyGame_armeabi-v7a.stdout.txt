@@ -1,5 +1,5 @@
 ninja: Entering directory `E:\Cocos2d-x\cocosProjects\RBlast\TestTaskRBlast\proj.android\app\.cxx\cmake\debug\armeabi-v7a'
-[1/5] Building CXX object CMakeFiles/MyGame.dir/Classes/AppDelegate.cpp.o
+[1/4] Building CXX object CMakeFiles/MyGame.dir/Classes/AppDelegate.cpp.o
 In file included from ../../../../../../Classes/AppDelegate.cpp:26:
 ../../../../../../Classes/HelloWorldScene.h:37:18: warning: 'init' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
     virtual bool init();
@@ -8,9 +8,8 @@ In file included from ../../../../../../Classes/AppDelegate.cpp:26:
     bool init() override;
          ^
 1 warning generated.
-[2/5] Building CXX object CMakeFiles/MyGame.dir/Classes/ButtonLongPressSupport.cpp.o
-[3/5] Building CXX object CMakeFiles/MyGame.dir/Classes/Button.cpp.o
-[4/5] Building CXX object CMakeFiles/MyGame.dir/Classes/HelloWorldScene.cpp.o
+[2/4] Building CXX object CMakeFiles/MyGame.dir/Classes/ButtonLongPressSupport.cpp.o
+[3/4] Building CXX object CMakeFiles/MyGame.dir/Classes/HelloWorldScene.cpp.o
 In file included from ../../../../../../Classes/HelloWorldScene.cpp:25:
 ../../../../../../Classes/HelloWorldScene.h:37:18: warning: 'init' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
     virtual bool init();
@@ -19,4 +18,4 @@ In file included from ../../../../../../Classes/HelloWorldScene.cpp:25:
     bool init() override;
          ^
 1 warning generated.
-[5/5] Linking CXX shared library ..\..\..\..\build\intermediates\cmake\debug\obj\armeabi-v7a\libMyGame.so
+[4/4] Linking CXX shared library ..\..\..\..\build\intermediates\cmake\debug\obj\armeabi-v7a\libMyGame.so

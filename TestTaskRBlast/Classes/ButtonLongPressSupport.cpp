@@ -57,6 +57,16 @@ void ButtonLongPressSupport::setLongPushState() {
     }
 }
 
+void ButtonLongPressSupport::setPushedState() {
+    if (currentState != ButtonLongPressSupportState::PUSHED &&
+        currentState != ButtonLongPressSupportState::LONG_PUSH) {
+        normalSprite->setVisible(false);
+        pressedSprite->setVisible(true);
+
+        currentState = ButtonLongPressSupportState::PUSHED;
+    }
+}
+
 std::string ButtonLongPressSupport::getCurrentStateAsString() const {
     switch (currentState) {
         case ButtonLongPressSupportState::IDLE:

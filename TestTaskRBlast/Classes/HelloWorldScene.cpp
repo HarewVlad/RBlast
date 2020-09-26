@@ -145,6 +145,7 @@ bool HelloWorld::init()
     this->addChild(buttonLongPressSupport);
 
     this->scheduleUpdate();
+
     return true;
 }
 
