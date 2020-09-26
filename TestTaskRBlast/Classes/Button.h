@@ -2,8 +2,7 @@
 // Created by Vlad on 24.09.2020.
 //
 
-#ifndef PROJ_ANDROID_BUTTON_H
-#define PROJ_ANDROID_BUTTON_H
+#pragma once
 
 #include "cocos2d.h"
 #include "ui/CocosGUI.h"
@@ -48,6 +47,3 @@ protected:
     const float expandZoneOffset = 20.0f;
     const float safeZoneOffset = 100.0f;
 };
-
-
-#endif //PROJ_ANDROID_BUTTON_H

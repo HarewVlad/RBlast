@@ -22,8 +22,7 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-#ifndef __HELLOWORLD_SCENE_H__
-#define __HELLOWORLD_SCENE_H__
+#pragma once
 
 #include "cocos2d.h"
 #include "Button.h"
@@ -51,5 +50,3 @@ private:
 
     cocos2d::Scene *testScenes;
 };
-
-#endif // __HELLOWORLD_SCENE_H__

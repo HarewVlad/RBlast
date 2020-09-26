@@ -2,8 +2,7 @@
 // Created by Vlad on 24.09.2020.
 //
 
-#ifndef PROJ_ANDROID_BUTTONLONGPRESSSUPPORT_H
-#define PROJ_ANDROID_BUTTONLONGPRESSSUPPORT_H
+#pragma once
 
 #include "Button.h"
 
@@ -26,6 +25,3 @@ private:
     float timePushed;
     float longPushThreshold;
 };
-
-
-#endif //PROJ_ANDROID_BUTTONLONGPRESSSUPPORT_H

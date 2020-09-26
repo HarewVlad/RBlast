@@ -1283,3 +1283,9 @@
 141	4165	622832284	CMakeFiles/MyGame.dir/Classes/ButtonLongPressSupport.cpp.o	db2541572c3f1b11
 138	4284	622832284	CMakeFiles/MyGame.dir/Classes/HelloWorldScene.cpp.o	de1283c988793c4f
 4284	14194	622832294	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libMyGame.so	b38fb90bfb703c14
+78	6365	622833592	CMakeFiles/MyGame.dir/Classes/ButtonLongPressSupport.cpp.o	db2541572c3f1b11
+33	6377	622833592	CMakeFiles/MyGame.dir/Classes/AppDelegate.cpp.o	778548ad4061f484
+380	6378	622833592	CMakeFiles/MyGame.dir/proj.android/app/jni/hellocpp/main.cpp.o	8f3430474ffa672d
+40	6378	622833592	CMakeFiles/MyGame.dir/Classes/HelloWorldScene.cpp.o	de1283c988793c4f
+37	6379	622833592	CMakeFiles/MyGame.dir/Classes/Button.cpp.o	7cbe126e21e22084
+6379	17128	622833604	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libMyGame.so	b38fb90bfb703c14
